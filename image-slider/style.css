@@ -34,6 +34,7 @@
   background-image: url("images/img-1.jpg");
   background-size: cover;
   background-position: center;
+  transform: scaleX(-1);
 }
 
 .slider-wrapper .slider-item:nth-child(2):before {
@@ -45,16 +46,17 @@
 }
 
 .slider-wrapper .slider-item:nth-child(4):before {
-  filter: grayscale(25%) brightness(80%);
+  filter: grayscale(5%) brightness(80%);
   background-image: url("images/img-4.jpg");
 }
 
 .slider-wrapper .slider-item:nth-child(5):before {
   background-image: url("images/img-5.jpg");
+
 }
 
 .slider-wrapper .slider-item .slide-content {
-  position: relative;
+  position: absolute;
   z-index: 10;
   color: #fff;
   width: 100%;
@@ -92,7 +94,9 @@
   font-weight: normal;
   opacity: 0;
   transform: translateY(60%);
+  
 }
+
 
 .slider-item.swiper-slide-active :where(.slide-title, .slide-subtitle) {
   animation: animate_text 0.6s 0.6s linear forwards;
